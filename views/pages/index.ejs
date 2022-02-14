@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs') %> <%- include('../partials/navbar.ejs')%>
+  <body>
+    <div class="container">
+      <h1>All Courses</h1>
+      <% if (status=="inserted"){ %>
+      <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">
+          &times;
+        </button>
+        <strong>Success!</strong> Course inserted successfully!
+      </div>
+      <% } %> <% if (status=="updated"){ %>
+      <div class="alert alert-warning alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">
+          &times;
+        </button>
+        <strong>Updated!</strong> Course updated successfully!
+      </div>
+      <% } %> <% if (status=="deleted"){ %>
+      <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">
+          &times;
+        </button>
+        <strong>Delete!</strong> Course deleted successfully!
+      </div>
+      <% } %> <% if(course.length > 0){ %>
+      <table class="table table-hover table-responsive-md">
+        <thead class="thead-dark">
+          <th>Course Name</th>
+          <th>Coursse Duration</th>
+          <th>Course Fees</th>
+          <th>Action</th>
+        </thead>
+        <tbody>
+          <% course.forEach(data => { %>
+          <tr>
+            <td><%= data.courseName %></td>
+            <td><%= data.courseDuration %></td>
+            <td><%= data.courseFees %></td>
+            <td>
+              <a href="/updateCourse/<%= data.id %>" class="icon">
+                <i class="bi bi-pencil-square"></i>
+              </a>
+              <a
+                href="/deleteCourse/<%= data.id %>"
+                onclick="return confirm('Do you want to delete?')"
+                class="icon"
+              >
+                <i class="bi bi-trash"></i>
+              </a>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <% } else { %>
+      <h4>There is no data to display!</h4>
+      <% } %>
+    </div>
+  </body>
+  <%- include('../partials/footer.ejs') %>
+</html>

@@ -1,0 +1,81 @@
+footer {
+  text-align: center;
+  text-transform: uppercase;
+  color: #0061d5;
+  background-color: skyblue;
+  padding: 10px;
+  font-weight: bold;
+}
+
+nav {
+  text-transform: uppercase;
+  color: #0061d5;
+  background-color: skyblue;
+  padding: 10px;
+  font-weight: bold;
+}
+
+h3 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.btn-title {
+  color: #0061d5;
+  background-color: skyblue;
+}
+
+.btn-title:hover {
+  background: #0061d5;
+  color: skyblue;
+}
+
+.title {
+  text-transform: uppercase;
+  color: #0061d5;
+  background-color: skyblue;
+  font-weight: bold;
+}
+
+h1 {
+  color: #0061d5;
+  text-align: center;
+  padding: 10px;
+}
+
+.table-hover tbody tr:hover {
+  color: #0061d5;
+  background-color: rgb(135, 206, 235, 0.25);
+}
+
+.btn-add {
+  margin: 5px 0px;
+  color: #0061d5;
+  background-color: white;
+  border: 1px solid #0061d5;
+}
+
+.btn-add:hover {
+  background: #0061d5;
+  color: white;
+}
+
+h4 {
+  text-align: center;
+  color: red;
+  padding: 10px;
+}
+
+a.icon {
+  color: black;
+  margin: 0px 5px;
+}
+
+a.icon:hover {
+  color: #0061d5;
+  text-decoration: none;
+}
+
+.bi {
+  font-size: 1.2em;
+}
